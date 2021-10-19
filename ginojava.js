@@ -19,7 +19,7 @@ let peppersRow = document.getElementById('peppersPizza')
 let pineapplesRow = document.getElementById('pineapplesPizza')
 let picklesRow = document.getElementById('picklesPizza')
 
-//                                  THE RANK BUTTONS
+//                                  THE RANK BUTTONS (do not work yet)
 
 let cheeseUp= document.getElementById("cheeseUp")
 let cheeseDown= document.getElementById("cheeseDown")
@@ -112,18 +112,33 @@ deleteButtonSausage.addEventListener('click', () => {
     grandparent.remove()
 })
 
-let kwSalary = document.getElementById("kwSalary");
-      kwSalary.addEventListener('mouseover', function(){
-         
-      })
 
 
 
-//                                 THE HATE BUTTON (retired)
+let scamButton=document.getElementById("scamButton")
+scamButton.addEventListener("click",e => alert("Up your nose with a rubber hose! Bafangool!"))
 
-// let hatebuttons= document.getElementsByClassName("hateThis")
-// hatebuttons[0].addEventListener("click",e => alert("You've got no taste!"))
+//                                  THE SUBMISSION FORM
 
+let submitPizzaForm= document.getElementById("submitPizzaForm")
+submitPizzaForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    addNewFlavor(e.target.newPizzaFlavor.value)
+}
+)
+
+function addNewFlavor(flavorSubmission){
+    let customFlavorRow = document.createElement('tr')
+    let customFlavorColumnOne = document.createElement('td')
+    let customFlavorColumnTwo = document.createElement('td')
+    let customFlavorColumnThree = document.createElement('td')
+    customFlavorColumnOne.textContent=`${flavorSubmission}`
+    customFlavorColumnTwo.textContent="$200"
+    customFlavorRow.appendChild(customFlavorColumnOne)
+    customFlavorRow.appendChild(customFlavorColumnTwo)
+    customFlavorRow.appendChild(customFlavorColumnThree)
+    pizzaMenuTableBody.append(customFlavorRow)
+}
 
 
 //                                      INSERT BEFORE / EXPERIMENTS:
@@ -143,7 +158,8 @@ function insertNewRow(aNewRow,insertedBehind){
     pizzaMenuTableBody.insertBefore(aNewRow,insertedBehind)
 }
 
-// Moves everything to the bottom...
+
+// Moves everything to the bottom, does not work yet...
 function rankUpPizza(button){
     let buttonsData=button.parentElement
     let buttonsRow=buttonsData.parentElement
@@ -153,3 +169,15 @@ function rankUpPizza(button){
     let targetRow=parentTable[targetIndex]
     parentTable.insertBefore(buttonsRow,targetRow)
 }
+
+//                                THE SALARY MOUSEOVERS
+
+let kwSalary = document.getElementById("kwSalary");
+      kwSalary.addEventListener('mouseover', function(){
+         
+      })
+
+//                                 THE HATE BUTTON (retired)
+
+// let hatebuttons= document.getElementsByClassName("hateThis")
+// hatebuttons[0].addEventListener("click",e => alert("You've got no taste!"))
