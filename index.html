@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="ginojava.js"></script>
+        <script defer src="ginojava.js"></script>
         <link rel="stylesheet" href="ginostyle.css">
         <title>
             Gino's Sicilian Pizzeria and New York Knicks Blog
@@ -27,45 +27,45 @@
                     <th class="priceOfPizza">PRICE</th>
                     <th class="rankEmPizza">RANK EM</th>
                 </tr>
-                <tr>
+                <tr id= "cheesePizza">
                     <td class="typeOfPizza">Cheese</td>
                     <td class="priceOfPizza">$2.75</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id="cheeseUp">↑</button> <button type="button" class="rankdown" id="cheeseDown=">↓</button><button type="button" id="deleteThisCheese">Delete this flavor, Geno!</button></td>
                 </tr>
-                <tr>
+                <tr id= "mushroomsPizza">
                     <td class="typeOfPizza">Mushrooms</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id="mushroomsUp">↑</button> <button type="button" class="rankdown" id="mushroomsDown">↓</button><button type="button" id="deleteThisMushrooms">Delete this flavor, Geno!</button></td>
                 </tr>
-                <tr>
+                <tr id ="onionsPizza">
                     <td class="typeOfPizza">Onions</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id= "onionsUp">↑</button> <button type="button" class="rankdown" id= "onionsDown">↓</button><button type="button" id="deleteThisOnions">Delete this flavor, Geno!</button></td>
                 </tr>
-                <tr>
+                <tr id="pepperoniPizza">
                     <td class="typeOfPizza">Pepperoni</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id="pepperoniUp">↑</button> <button type="button" class="rankdown" id="pepperoniDown">↓</button><button type="button" id="deleteThisPepperoni">Delete this flavor, Geno!</button></td>
                 </tr>
-                <tr>
+                <tr id="sausagePizza">
                     <td class="typeOfPizza">Sausage</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id="sausageUp">↑</button> <button type="button" class="rankdown" id="sausageDown">↓</button><button type="button" id="deleteThisSausage">Delete this flavor, Geno!</button></td>
                 </tr>
-                <tr>
+                <tr id="peppersPizza">
                     <td class="typeOfPizza">Peppers</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id="peppersUp">↑</button> <button type="button" class="rankdown" id="peppersDown">↓</button><button type="button" id="deleteThisPeppers">Delete this flavor, Geno!</button></td>
                 </tr>
-                <tr>
+                <tr id="pineapplesPizza">
                     <td class="typeOfPizza">Pineapples</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id="pineapplesUp">↑</button> <button type="button" class="rankdown" id="pineapplesDown">↓</button><button type="button" id="deleteThisPineapples">Delete this flavor, Geno!</button> </td>
                 </tr>
-                <tr>
+                <tr id="picklesPizza">
                     <td class="typeOfPizza">Pickles</td>
                     <td class="priceOfPizza">$3.25</td>
-                    <td class="rankEmPizza"><button type="button" class="rankup">↑</button> <button type="button" class="rankdown">↓</button></td>
+                    <td class="rankEmPizza"><button type="button" class="rankup" id= "picklesUp">↑</button> <button type="button" class="rankdown" id="picklesDown">↓</button><button type="button" id="deleteThisPickles">Delete this flavor, Geno!</button></td>
                 </tr>
             </table>
         </div>
@@ -83,79 +83,79 @@
                 <tr class="knickRow">
                     <td class="knicksPlayer">Kemba Walker</td>
                     <td class="knicksPosition">Starting PG</td>
-                    <td class="knicksSalary">$8,729,020</td>
+                    <td class="knicksSalary" id="kwSalary">$8,729,020</td>
                 </tr>
                 <tr>
                     <td class="knicksPlayer">Evan Fournier</td>
                     <td class="knicksPosition">Starting SG</td>
-                    <td class="knicksSalary">$17,142,857</td>
+                    <td class="knicksSalary" id="efSalary">$17,142,857</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">RJ Barrett</td>
                     <td class="knicksPosition">Starting SF</td>
-                    <td class="knicksSalary">$8,623,920</td>
+                    <td class="knicksSalary" id="rjbSalary">$8,623,920</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Julius Randle</td>
                     <td class="knicksPosition">Starting PF</td>
-                    <td class="knicksSalary">$21,780,000</td>
+                    <td class="knicksSalary" id="jrSalary">$21,780,000</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Nerlens Noel</td>
                     <td class="knicksPosition">Starting C</td>
-                    <td class="knicksSalary">$8,800,000</td>
+                    <td class="knicksSalary" id="nnSalary">$8,800,000</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Derrick Rose</td>
                     <td class="knicksPosition">PG</td>
-                    <td class="knicksSalary">$13,445,120</td>
+                    <td class="knicksSalary" id="drSalary">$13,445,120</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Immanuel Quickley</td>
                     <td class="knicksPosition">PG / SG</td>
-                    <td class="knicksSalary">$2,210,640</td>
+                    <td class="knicksSalary" id="iqSalary">$2,210,640</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Alec Burks</td>
                     <td class="knicksPosition">SG / SF</td>
-                    <td class="knicksSalary">$9,536,000</td>
+                    <td class="knicksSalary" id="abSalary">$9,536,000</td>
                 </tr>
              
                 <tr class="knickRow">
                     <td class="knicksPlayer">Obediah "Obi" Toppin</td>
                     <td class="knicksPosition">PF</td>
-                    <td class="knicksSalary">$5,105,160</td>
+                    <td class="knicksSalary" id="otSalary">$5,105,160</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Mitchell Robinson</td>
                     <td class="knicksPosition">C</td>
-                    <td class="knicksSalary">$1,802,057</td>
+                    <td class="knicksSalary" id="mrSalary">$1,802,057</td>
                 </tr>
                 <tr class="knickRow">
                         <td class="knicksPlayer">Miles McBride</td>
                         <td class="knicksPosition">PG</td>
-                        <td class="knicksSalary">$925,258</td>
+                        <td class="knicksSalary" id="mmbSalary">$925,258</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Dwayne Bacon</td>
                     <td class="knicksPosition">SG / SF</td>
-                    <td class="knicksSalary">$1,669,178</td>
+                    <td class="knicksSalary" id="dbSalary">$1,669,178</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Kevin Knox</td>
                     <td class="knicksPosition">SF / PF</td>
-                    <td class="knicksSalary">$5,845,978</td>
+                    <td class="knicksSalary" id="kkSalary">$5,845,978</td>
                 </tr>
               
                 <tr class="knickRow">
                     <td class="knicksPlayer">Taj Gibson</td>
                     <td class="knicksPosition">PF / C</td>
-                    <td class="knicksSalary">$4,910,000</td>
+                    <td class="knicksSalary" id="tgSalary">$4,910,000</td>
                 </tr>
                 <tr class="knickRow">
                     <td class="knicksPlayer">Jericho Sims</td>
                     <td class="knicksPosition">C</td>
-                    <td class="knicksSalary">$462,629</td>
+                    <td class="knicksSalary" id="jsSalary">$462,629</td>
                 </tr>
                
 
@@ -226,3 +226,5 @@
 
     </body>
 </html>
+
+<!-- <button type="button" class="hateThis">I hate this flavor!</button> -->
