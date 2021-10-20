@@ -18,33 +18,121 @@ let sausageRow = document.getElementById('sausagePizza')
 let peppersRow = document.getElementById('peppersPizza')
 let pineapplesRow = document.getElementById('pineapplesPizza')
 let picklesRow = document.getElementById('picklesPizza')
+let submissionRow = document.getElementById('submitPizza')
 
-//                                  THE RANK BUTTONS (do not work yet)
+//                                  THE RANK BUTTONS UP AND DOWN BUTTONS
 
 let cheeseUp= document.getElementById("cheeseUp")
 let cheeseDown= document.getElementById("cheeseDown")
+cheeseUp.addEventListener("click", () => {
+    let rowAbove = cheeseRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(cheeseRow,rowAbove)
+}})
+cheeseDown.addEventListener("click", () => {
+    let targetRow=cheeseRow.nextElementSibling.nextElementSibling
+    let nextRow=cheeseRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedCheese=pizzaMenuTableBody.insertBefore(cheeseRow,targetRow)
+}})
 
 let mushroomsUp= document.getElementById("mushroomsUp")
 let mushroomsDown= document.getElementById("mushroomsDown")
+mushroomsUp.addEventListener("click", () => {
+    let rowAbove = mushroomsRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(mushroomsRow,rowAbove)
+}})
+mushroomsDown.addEventListener("click", () => {
+    let targetRow=mushroomsRow.nextElementSibling.nextElementSibling
+    let nextRow=mushroomsRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedMushrooms=pizzaMenuTableBody.insertBefore(mushroomsRow,targetRow)
+}})
 
 let onionsUp= document.getElementById("onionsUp")
 let onionsDown= document.getElementById("onionsDown")
+onionsUp.addEventListener("click", () => {
+    let rowAbove = onionsRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(onionsRow,rowAbove)
+}})
+onionsDown.addEventListener("click", () => {
+    let targetRow=onionsRow.nextElementSibling.nextElementSibling
+    let nextRow=onionsRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedOnions=pizzaMenuTableBody.insertBefore(onionsRow,targetRow)
+}})
 
 let pepperoniUp= document.getElementById("pepperoniUp")
 let pepperoniDown= document.getElementById("pepperoniDown")
+pepperoniUp.addEventListener("click", () => {
+    let rowAbove = pepperoniRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(pepperoniRow,rowAbove)
+}})
+pepperoniDown.addEventListener("click", () => {
+    let targetRow=pepperoniRow.nextElementSibling.nextElementSibling
+    let nextRow=pepperoniRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedPepperoni=pizzaMenuTableBody.insertBefore(pepperoniRow,targetRow)
+}})
 
 let sausageUp= document.getElementById("sausageUp")
 let sausageDown= document.getElementById("sausageDown")
+sausageUp.addEventListener("click", () => {
+    let rowAbove = sausageRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(sausageRow,rowAbove)
+}})
+sausageDown.addEventListener("click", () => {
+    let targetRow=sausageRow.nextElementSibling.nextElementSibling
+    let nextRow=sausageRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedSausage=pizzaMenuTableBody.insertBefore(sausageRow,targetRow)
+}})
 
 let peppersUp= document.getElementById("peppersUp")
 let peppersDown= document.getElementById("peppersDown")
+peppersUp.addEventListener("click", () => {
+    let rowAbove = peppersRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(peppersRow,rowAbove)
+}})
+peppersDown.addEventListener("click", () => {
+    let targetRow=peppersRow.nextElementSibling.nextElementSibling
+    let nextRow=peppersRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedPeppers=pizzaMenuTableBody.insertBefore(peppersRow,targetRow)
+}})
 
 let pineapplesUp= document.getElementById("pineapplesUp")
 let pineapplesDown= document.getElementById("pineapplesDown")
+pineapplesUp.addEventListener("click", () => {
+    let rowAbove = pineapplesRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(pineapplesRow,rowAbove)
+}})
+pineapplesDown.addEventListener("click", () => {
+    let targetRow=pineapplesRow.nextElementSibling.nextElementSibling
+    let nextRow=pineapplesRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedPineapples=pizzaMenuTableBody.insertBefore(pineapplesRow,targetRow)
+}})
 
 let picklesUp= document.getElementById("picklesUp")
 let picklesDown= document.getElementById("picklesDown")
-
+picklesUp.addEventListener("click", () => {
+    let rowAbove = picklesRow.previousElementSibling
+    if (rowAbove.id !=="tableHeader"){
+    let newPlacement = pizzaMenuTableBody.insertBefore(picklesRow,rowAbove)
+}})
+picklesDown.addEventListener("click", () => {
+    let targetRow=picklesRow.nextElementSibling.nextElementSibling
+    let nextRow=picklesRow.nextElementSibling
+    if (nextRow.id !=="submitPizza"){
+    let downvotedPickles=pizzaMenuTableBody.insertBefore(picklesRow,targetRow)
+}})
 
 
 //                                 THE DELETE BUTTONS
@@ -61,7 +149,6 @@ deleteButtonCheese.addEventListener('click', () => {
     let grandparent=parentRow.parentNode
     grandparent.remove()
 })
-
 
 let deleteButtonMushrooms= document.getElementById('deleteThisMushrooms')
 deleteButtonMushrooms.addEventListener('click', () => {
@@ -112,13 +199,9 @@ deleteButtonSausage.addEventListener('click', () => {
     grandparent.remove()
 })
 
-
-
-
+//                      THE SUGGESTED FLAVOR ROW
 let scamButton=document.getElementById("scamButton")
 scamButton.addEventListener("click",e => alert("Up your nose with a rubber hose! Bafangool!"))
-
-//                                  THE SUBMISSION FORM
 
 let submitPizzaForm= document.getElementById("submitPizzaForm")
 submitPizzaForm.addEventListener('submit', (e) => {
@@ -132,12 +215,52 @@ function addNewFlavor(flavorSubmission){
     let customFlavorColumnOne = document.createElement('td')
     let customFlavorColumnTwo = document.createElement('td')
     let customFlavorColumnThree = document.createElement('td')
+    let customFlavorDeleteButton = document.createElement('button')
+    let customFlavorUpButton = document.createElement('button')
+    let customFlavorDownButton = document.createElement('button')
+
+    customFlavorDeleteButton.type = "button"
+    customFlavorDeleteButton.class = "deleteButton"
+    customFlavorDeleteButton.textContent = "I've made a huge mistake, Gino!"
+    customFlavorDeleteButton.addEventListener('click', () => {
+        let parentColumn=customFlavorDeleteButton.parentNode
+        let parentRow=parentColumn.parentNode
+        parentRow.remove()
+    })
+
+    customFlavorUpButton.type = "button"
+    customFlavorUpButton.class = "rankup"
+    customFlavorUpButton.textContent = "↑"
+    customFlavorUpButton.addEventListener('click', () => {
+        let parentColumn=customFlavorUpButton.parentNode
+        let parentRow=parentColumn.parentNode
+        let rowAbove=parentRow.previousElementSibling
+        if (rowAbove.id !=="tableHeader"){
+        let newPlacement = pizzaMenuTableBody.insertBefore(parentRow,rowAbove)
+    }})
+
+    customFlavorDownButton.type = "button"
+    customFlavorDownButton.class = "rankdown"
+    customFlavorDownButton.textContent = "↓"
+    customFlavorDownButton.addEventListener("click",() => {
+        let targetRow=customFlavorRow.nextElementSibling.nextElementSibling
+        let nextRow=customFlavorRow.nextElementSibling
+        let parentColumn = customFlavorDownButton.parentNode
+        let parentRow = parentColumn.parentNode
+        if (nextRow.id !=="submitPizza"){
+        let downvotedCustom=pizzaMenuTableBody.insertBefore(parentRow,targetRow)  
+    }})
+
     customFlavorColumnOne.textContent=`${flavorSubmission}`
     customFlavorColumnTwo.textContent="$200"
+    customFlavorColumnThree.append(customFlavorUpButton)
+    customFlavorColumnThree.append(customFlavorDownButton)
+    customFlavorColumnThree.append(customFlavorDeleteButton)
     customFlavorRow.appendChild(customFlavorColumnOne)
     customFlavorRow.appendChild(customFlavorColumnTwo)
     customFlavorRow.appendChild(customFlavorColumnThree)
-    pizzaMenuTableBody.append(customFlavorRow)
+    customFlavorRow.class = "customFlavorRow"
+    let placedCustomRow = pizzaMenuTableBody.insertBefore(customFlavorRow,submissionRow)
 }
 
 
@@ -160,15 +283,6 @@ function insertNewRow(aNewRow,insertedBehind){
 
 
 // Moves everything to the bottom, does not work yet...
-function rankUpPizza(button){
-    let buttonsData=button.parentElement
-    let buttonsRow=buttonsData.parentElement
-    let buttonsIndex=buttonsRow.rowIndex
-    let targetIndex=(buttonsIndex-1)
-    let parentTable= buttonsRow.parentElement
-    let targetRow=parentTable[targetIndex]
-    parentTable.insertBefore(buttonsRow,targetRow)
-}
 
 //                                THE SALARY MOUSEOVERS
 
